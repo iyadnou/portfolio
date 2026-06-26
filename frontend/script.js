@@ -9,40 +9,6 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     });
 });
 
-// Form submission handling
-const contactForm = document.getElementById('contactForm');
-if (contactForm) {
-    contactForm.addEventListener('submit', function (e) {
-        e.preventDefault();
-        
-        // Get form data
-        const name = document.getElementById('name').value;
-        const email = document.getElementById('email').value;
-        const subject = document.getElementById('subject').value;
-        const message = document.getElementById('message').value;
-
-        // Send data to backend
-        fetch('https://portfolio-inoc.onrender.com/api/messages', {
-            method: 'POST',
-            headers: { 'Content-Type': 'application/json' },
-            body: JSON.stringify({ name, email, subject, message })
-        })
-        .then(res => res.json())
-        .then(data => {
-            if (data.success) {
-                alert('Thank you for your message! I will get back to you soon.');
-                contactForm.reset();
-            } else {
-                alert('Error: ' + (data.error || 'Submission failed.'));
-            }
-        })
-        .catch(err => {
-        console.error("Fetch error:", err);
-        alert("Error submitting the form.");
-        });
-    });
-}
-
 // Active navigation link highlighting
 const currentPage = window.location.pathname.split('/').pop() || 'index.html';
 document.querySelectorAll('.nav-links a').forEach(link => {
