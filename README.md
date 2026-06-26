@@ -3,8 +3,6 @@
 A responsive and modern portfolio website showcasing projects, skills, and experience.
  
 
-# Frontend:
-cd frontend
 python3 -m http.server 8000
 
 ## Features
