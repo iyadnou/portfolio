@@ -22,7 +22,7 @@ if (contactForm) {
         const message = document.getElementById('message').value;
 
         // Send data to backend
-        fetch('http://localhost:3001/api/messages', {
+        fetch('https://portfolio-inoc.onrender.com/api/messages', {
             method: 'POST',
             headers: { 'Content-Type': 'application/json' },
             body: JSON.stringify({ name, email, subject, message })
