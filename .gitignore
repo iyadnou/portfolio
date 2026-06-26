@@ -1,0 +1,14 @@
+# Node dependencies
+backend/node_modules/
+
+# SQLite database
+backend/messages.db
+
+# Logs
+*.log
+
+# macOS
+.DS_Store
+
+# Environment variables
+backend/.env
