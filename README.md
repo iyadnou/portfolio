@@ -1,10 +1,7 @@
 # My Portfolio
 
 A responsive and modern portfolio website showcasing projects, skills, and experience.
-
-# Backend:
-Portfolio % cd backend
-node server.js  
+ 
 
 # Frontend:
 cd frontend
